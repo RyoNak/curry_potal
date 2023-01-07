@@ -1,0 +1,149 @@
+/*webフォント*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Antique&display=swap');
+/*フォント指定*/
+.pop{
+    font-family: 'Poppins', sans-serif;
+}
+.sip{
+    font-family: 'Shippori Antique', sans-serif;
+}
+/*font-awesome用*/
+.faw{
+    font-family: Font Awesome\ 5 Free;
+    margin-right: 10px;
+}
+/*共通プロパティ*/
+$c1: #FBFFB9;
+$c2: #FDD692;
+$c3: #EC7357;
+$c4: #754F44;
+/*リセット*/
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+body, body * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*汎用クラス*/
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.between {
+        justify-content: space-between;
+    }
+
+    &.end {
+        justify-content: end;
+    }
+
+    &.alc {
+        align-items: center;
+    }
+}
+
+.wmax {
+    width: 100%;
+}
+
+.hmax {
+    height: 100%;
+}
+
+.bigpad {
+    padding: 60px 80px;
+}
+
+.shadow1 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/*固有CSS*/
+header {
+    width: 100%;
+    height: 72px;
+    background: $c3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+    .head-wrap {
+        width: 96%;
+        margin: 0 auto;
+
+        .head-logo {
+            width: 20%;
+            margin-right: auto;
+        }
+
+        ul.head-menu {
+            width: 80%;
+
+            li {
+                min-width: 20%;
+                text-align: center;
+            }
+        }
+    }
+}
+.sidebar{
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $c3;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    ul.sidebar-menu{
+        margin-top: 82px;
+        li{
+            padding: 15px 20px;
+            &:hover{
+                background: darken($c3, 10%);
+                transition: all .5s linear;
+            }
+        }
+    }
+}
+
+.container {
+    height: 100%;
+
+    .content_wrap {
+        //max-width: 1000px;
+        margin: 0 auto;
+    }
+}
