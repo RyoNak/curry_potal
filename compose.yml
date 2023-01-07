@@ -16,6 +16,7 @@ services:
       - ./src:/var/www/html/curry_potal
       - vendor-store:/var/www/html/curry_potal/vendor #ボリュームマウント
     environment: # ⑩ 環境変数を設定
+      - TZ=Asia/Tokyo
       - DB_CONNECTION=mysql
       - DB_HOST=db
       - DB_PORT=3306
@@ -45,6 +46,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
+      - TZ=Asia/Tokyo
       - PMA_ARBITRARY=1
       - PMA_HOST=db
       - PMA_USER=root
